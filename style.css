@@ -1,4 +1,12 @@
+@font-face {
+  font-family: 'BC1.0';
+  src: url('prsb1.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
+      font-family: 'BC1.0', sans-serif;
       background: #111;
       display: flex;
       justify-content: center;
