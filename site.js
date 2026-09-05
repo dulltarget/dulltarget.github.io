@@ -19,8 +19,13 @@ document.addEventListener('DOMContentLoaded', async () => {
   function PUTICON(X,Y,ICON,COL){
     CTX.drawImage(ICON,X,Y);
   } 
-  
-  function PUTMESSAGE(WIDTH,HEIGHT,ICON,IWIDTH,IHEIGHT){
+
+  function PUTSTR(X,Y,STR,COL){
+    CTX.fillStyle = COL;
+    CTX.fillText(STR,X,Y);
+  }
+
+  function PUTMESSAGE(WIDTH,HEIGHT,MESSAGE,ICON,IWIDTH,IHEIGHT){
     const INDEX = 0;
     const CHARCORD = 0;
     const ICORD = 0;
@@ -33,11 +38,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     PUTRECTB(ALIGNX,ALIGNY,WIDTH,HEIGHT,2,"#000000");
     PUTRECTF(ALIGNX+2,ALIGNY+2,WIDTH-4,HEIGHT-4,"#FFFFFF");
     PUTRECTB(ALIGNX+4,ALIGNY+4,WIDTH-8,HEIGHT-8,2,0);
-    //PUTSTR(CHARX,CHARY,MESSAGE,0,32);
+    PUTSTR(CHARX,CHARY,MESSAGE,"#000000");
     PUTICON(ICORDX,ICORDY,ICON,"#000000");
-}
+} 
   await FLOP.decode();
   PUTRECTF(0,0,640,480,"#FFFFFF");
-  PUTMESSAGE(320,90,FLOP,16,16);
+  PUTMESSAGE(320,90,"Welcome.",FLOP,16,16);
 
 });
