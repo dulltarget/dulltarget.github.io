@@ -42,7 +42,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     PUTICON(ICORDX,ICORDY,ICON,"#000000");
 } 
   await FLOP.decode();
-  ctx.font = 'BC1.0';
+  CTX.font = '8px "BC1.0"';
+  CTX.textBaseline = 'top';
   PUTRECTF(0,0,640,480,"#FFFFFF");
   PUTMESSAGE(320,90,"Welcome.",FLOP,16,16);
 
